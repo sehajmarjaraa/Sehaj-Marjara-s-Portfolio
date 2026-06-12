@@ -1,5 +1,6 @@
 import { contact, site } from "../content";
 import { Cell } from "../selection";
+import { onEmailClick } from "../email";
 import { LinkIcon, MailIcon } from "../icons";
 
 /** Contact as a yellow "Insert Comment" note pinned to a cell. */
@@ -25,7 +26,7 @@ export function Contact() {
           <div className="flex flex-col gap-2 text-[13px] text-gray-800">
             <span className="flex items-center gap-2">
               <MailIcon className="w-4 h-4 text-gray-500" />
-              <a href={`mailto:${contact.email}`} className="underline decoration-dotted hover:text-excel-green">
+              <a href={`mailto:${contact.email}`} onClick={onEmailClick} className="underline decoration-dotted hover:text-excel-green">
                 {contact.email}
               </a>
             </span>
@@ -51,6 +52,7 @@ export function Contact() {
           {/* Excel form button */}
           <a
             href={`mailto:${contact.email}?subject=Saw your portfolio — let's talk`}
+            onClick={onEmailClick}
             className="mt-5 inline-block bg-[#ececec] border border-gray-400 shadow-[1px_1px_0_#9a9a9a] active:shadow-none active:translate-x-px active:translate-y-px px-4 py-1.5 text-[13px] text-gray-800 font-medium"
           >
             Send Email

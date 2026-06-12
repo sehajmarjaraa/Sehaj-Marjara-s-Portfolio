@@ -7,6 +7,7 @@ import {
   site,
 } from "../content";
 import { Cell } from "../selection";
+import { onEmailClick } from "../email";
 import { ExternalIcon, GithubIcon, LinkIcon, MailIcon, PdfIcon } from "../icons";
 
 type ResultKind = "everything" | "experience" | "involvement" | "projects" | "error" | null;
@@ -62,6 +63,7 @@ export function About({
           </a>
           <a
             href={`mailto:${site.email}`}
+            onClick={onEmailClick}
             className="flex items-center gap-2 border border-excel-green text-excel-green hover:bg-excel-green/5 text-[13px] font-medium px-3.5 py-2 rounded-sm transition-colors"
           >
             <MailIcon className="w-4 h-4" /> Email

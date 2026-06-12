@@ -129,7 +129,7 @@ export const projects: Project[] = [
     codename: "callsignal",
     title: "Earnings Call Sentiment Analyzer",
     description: "Turns earnings call transcripts into auditable buy-side signals, with every claim grounded in a direct quote and temperature-0 model judgment.",
-    tags: ["Python", "Claude API", "NLP"],
+    tags: ["Earnings Transcripts", "Sentiment Scoring", "Evidence-Grounded"],
     link: "https://callsignal.vercel.app/",
   },
   {
@@ -137,7 +137,7 @@ export const projects: Project[] = [
     codename: "redline",
     title: "AI 10-K Auto-Summarizer",
     description: "Pulls year-over-year changes from real SEC EDGAR 10-K filings into evidence-grounded research, every figure traceable to source.",
-    tags: ["Python", "Claude API", "SEC EDGAR"],
+    tags: ["SEC EDGAR", "YoY Diff Engine", "Filing Analysis"],
     link: "https://redline-10k-auto-summarizer.vercel.app/",
   },
   {
@@ -145,7 +145,7 @@ export const projects: Project[] = [
     codename: "scenario-engine",
     title: "Natural Language DCF Override",
     description: "A deterministic DCF on live SEC data that you perturb with sliders or plain English, no manual formula edits.",
-    tags: ["Python", "Claude API", "Excel"],
+    tags: ["DCF Modeling", "Live SEC Data", "Scenario Engine"],
     link: "https://dcf-scenario-engine.vercel.app/",
   },
   {
@@ -153,7 +153,7 @@ export const projects: Project[] = [
     codename: "rebalance-desk",
     title: "Conversational Portfolio Rebalancer",
     description: "Constraint-aware mean-variance rebalancing on real market data, with fiduciary guardrails and deterministic risk analytics.",
-    tags: ["Python", "Claude API", "Pandas"],
+    tags: ["Mean-Variance Optimization", "Risk Analytics", "Market Data"],
     link: "https://conversational-portfolio-rebalancer.vercel.app/",
   },
   {
@@ -161,7 +161,7 @@ export const projects: Project[] = [
     codename: "forensic-flags",
     title: "AI Forensic Anomaly Detector",
     description: "An earnings-quality screen on real filings using Beneish M-Score, Altman Z, and accrual diagnostics to flag numbers-versus-narrative gaps.",
-    tags: ["Python", "Claude API", "Statistics"],
+    tags: ["Beneish M-Score", "Altman Z-Score", "Accrual Diagnostics"],
     link: "https://ai-forensic-anomaly-detector.vercel.app/",
   },
   {
@@ -169,7 +169,7 @@ export const projects: Project[] = [
     codename: "macro-desk",
     title: "AI Macro News-to-Trade Engine",
     description: "An 18-indicator macro dashboard from public data plus an LLM strategist that turns news events into structured cross-asset reads.",
-    tags: ["Python", "Claude API", "Market Data"],
+    tags: ["18 Macro Indicators", "Cross-Asset Signals", "Event Analysis"],
     link: "https://ai-macro-news-to-trade-engine.vercel.app/",
   },
 ];
@@ -193,6 +193,9 @@ export const involvement: InvolvementEntry[] = [
   },
   { id: "aig", organization: "Alternative Investments Group", role: "Real Estate Sector Analyst" },
   { id: "mbp", organization: "MBP NIL Business Teams", role: "Team Lead — Finance" },
+  { id: "fa", organization: "Finance Association", role: "Member" },
+  { id: "sia", organization: "Student Investment Association", role: "Member" },
+  { id: "bisc", organization: "Broad International Student Council (BISC)", role: "Member" },
 ];
 
 // ---------------------------------------------------------------------------

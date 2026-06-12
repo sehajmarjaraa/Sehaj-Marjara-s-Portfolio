@@ -1,5 +1,6 @@
 import { site } from "../content";
 import { CommentIcon, ShareIcon } from "../icons";
+import { onEmailClick } from "../email";
 
 export function TitleBar({ onComments }: { onComments: () => void }) {
   return (
@@ -41,6 +42,7 @@ export function TitleBar({ onComments }: { onComments: () => void }) {
         </button>
         <a
           href={`mailto:${site.email}?subject=Saw your portfolio — let's talk`}
+          onClick={onEmailClick}
           className="flex items-center gap-1.5 text-[12px] bg-excel-green hover:bg-excel-green-light text-white rounded px-2.5 py-1 transition-colors"
         >
           <ShareIcon />

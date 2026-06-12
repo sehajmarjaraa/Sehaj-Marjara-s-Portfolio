@@ -53,6 +53,13 @@ export default function App() {
     return () => clearTimeout(t);
   }, []);
 
+  // Global toast channel (e.g. email links announce the copied address).
+  useEffect(() => {
+    const onToast = (e: Event) => setToast((e as CustomEvent<string>).detail);
+    window.addEventListener("app-toast", onToast);
+    return () => window.removeEventListener("app-toast", onToast);
+  }, []);
+
   const switchTab = useCallback((id: SectionId) => {
     setActive(id);
     setFxOverride(null);

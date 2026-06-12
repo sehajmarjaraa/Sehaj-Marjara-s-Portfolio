@@ -1,8 +1,9 @@
 import type { ReactNode } from "react";
 import { sections, modelSection, about, projects, site } from "../content";
+import { onEmailClick } from "../email";
+import type { SectionId } from "../content";
 
 const ribbonTabs = [...sections, modelSection];
-import type { SectionId } from "../content";
 import {
   ChartIcon,
   CommentIcon,
@@ -151,6 +152,7 @@ function runAction(action: RibbonButton["action"], onCommand: (cmd: string) => v
   } else if (action.type === "scroll") {
     scrollToEntry(action.target);
   } else if (action.href.startsWith("mailto:")) {
+    onEmailClick();
     window.location.href = action.href;
   } else {
     window.open(action.href, "_blank", "noopener");
